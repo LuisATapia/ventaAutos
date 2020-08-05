@@ -8,12 +8,6 @@
     $typeUser = $_POST["registerTypeUser"];
     $email = $_POST["registerEmail"];
     $password = $_POST["registerPassword"];
-    $bank  = $_POST["registerBank"];
-    $numCard=$_POST["registerNumCard"];
-    $dateExp=$_POST["registerExp"];
-    $codeCvv=$_POST["registerCvv"];
-    $money=$_POST["registerMoney"];
-    
 
     $user = [
         '_id' => new MongoDB\BSON\ObjectId,
@@ -22,15 +16,7 @@
         'curp' => $curp,
         'typeUser'=>$typeUser,
         'email' => $email, 
-        'password' => $password,
-        'card'=>
-        [
-            'numCard'=>$numCard,
-            'bank'=>$bank,
-            'dateExp'=>$dateExp,
-            'codeCvv'=>$codeCvv,
-            'money'=>$money,
-        ]
+        'password' => $password
     ];
 
     try{
@@ -40,28 +26,3 @@
     }   catch(MongoDB\Driver\Exception\Exception $e){
         die("Error Encountered: ".$e);
     }
-/*******************************/
-try {
-    $bulk->update(
-        ['_id' => new MongoDB\BSON\ObjectId],
-        [
-        'name' => $name, 
-        'lastname' => $lastname,
-        'curp' => $curp,
-        'typeUser'=>$typeUser,
-        'email' => $email, 
-        'password' => $password,
-        'card'=>
-        [
-            'numCard'=>$numCard,
-            'dateExp'=>$dateExp,
-            'codeCvv'=>$codeCvv,
-            'money'=>$money
-        ]
-    ]
-    );
-    $result = $manager->executeBulkWrite($dbname, $bulk);
-    header("Location: ../../menuStart.php");
-} catch (MongoDB\Driver\Exception\Exception $e) {
-    die("Error:" . $e);
-}

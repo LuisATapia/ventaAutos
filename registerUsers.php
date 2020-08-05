@@ -51,35 +51,9 @@
                             <label for="inputZip">Type User</label>
                             <input type="password" class="form-control" id="registerTypeUser" name="registerTypeUser" value="user">
                         </div>
-                    </div>
-                    <!--TARJETA-->
-                    <h4>Tarjeta <i class="fas fa-credit-card"></i></h4>
-                    <div class="form-row">
-                        <br>
-                        <div class="form-group col-md-6">
-                            <label for="registerNumCard">Número de Tarjeta</label>
-                            <input type="text" class="form-control" id="registerNumCard" name="registerNumCard" maxlength="16">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="registerNumCard">Banco</label>
-                            <input type="text" class="form-control" id="registerBank" name="registerBank" maxlength="16">
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label for="registerExp">Fecha de Expiración</label>
-                            <input type="text" class="form-control" id="registerExp" name="registerExp" placeholder="DD-YY">
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label for="registerCvv">Código CVV</label>
-                            <input type="password" class="form-control" id="registerCvv" name="registerCvv" maxlength="4">
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label for="registerCvv">Saldo</label>
-                            <input type="money" class="form-control" id="registerMoney" name="registerMoney" maxlength="10">
-                        </div>
-                    </div>
-                    
-                    <div class="justify-content-center">
+                        <div class="justify-content-center">
                         <input type="submit" class="btn btn-primary" value="Registrar">
+                    </div>
                     </div>
                 </form>
             </div>

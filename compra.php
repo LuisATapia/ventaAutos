@@ -70,18 +70,6 @@ if (!isset($_SESSION['typeUser']) || !isset($_SESSION['idUser'])) {
                     <div class="form-group">
                         <input type="hidden" name="vendedor" value=<?php echo $_GET['vendedor']; ?>>
                     </div>
-                    <h4>Datos del usuario</h4>
-                    <div class="form-group">
-                        <label for="numCard">Número de Tarjeta</label>
-                        <label  id="text" name="numCard"><?php echo $numCard; ?></label>
-                    </div>
-                    <div class="form-group">
-                        <label for="numCard">Saldo Actual: $</label>
-                        <label  id="text" name="money"><?php echo $money; ?></label>
-                    </div>
-                    <div class="form-group">
-                        <input type="hidden" name="moneySaldo" id="moneySaldo" value=<?php echo $money; ?>>
-                    </div>
                     <div>
                         <input type="hidden" name="idCar" value= <?php echo $_GET['idCar']; ?>>
                     </div>

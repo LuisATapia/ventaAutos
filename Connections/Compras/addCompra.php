@@ -1,5 +1,5 @@
 <?php
-include '../Users/selectOne.php';
+/*include '../Users/selectOne.php';
 include '../Users/db.inc.php';
 
 $price=floatval($_POST['price']);
@@ -31,10 +31,10 @@ try {
     $result = $manager->executeBulkWrite($dbname, $bulk);
 } catch (MongoDB\Driver\Exception\Exception $e) {
     die("Error:" . $e);
-}
+}*/
 
 /***************ACTUALIZAR AUTO************************/
-
+session_start();
     include '../Cars/cars.inc.php';
     $bulk = new MongoDB\Driver\BulkWrite;
 
@@ -46,7 +46,7 @@ try {
     $color = $_POST["color"];
     $tag0 = $_POST["tag0"];
     $tag1 = $_POST["tag1"];
-    $priceF = floatval($price);
+    $priceF = floatval($_POST['price']);
     $status= "sold";
     $tipo=$_POST["tipoT"];
     $vendedor= $_POST["vendedor"];
@@ -67,7 +67,7 @@ try {
             'tags'=>[$tag0, $tag1]    
         ]);
         $result = $manager->executeBulkWrite($dbname, $bulk);
-        //header("Location: ../../menuStart.php");
+        header("Location: ../../menuStart.php");
     }catch(MongoDB\Driver\Exception\Exception $e){
         die("Error Encountered ".$e);
     }
@@ -104,7 +104,7 @@ try{
 	die("Error Encountered: ".$e);
 }
 
-/*******************Valores del usuario***********************/
+/*******************Valores del usuario***********************//*
 include '../Users/db.inc.php';
     $idU=$_POST["vendedor"];
 
@@ -131,10 +131,10 @@ include '../Users/db.inc.php';
         //header("Location: ../../menu_Master.php");
     } catch (MongoDB\Driver\Exception\Exception $e) {
         die("Error Encountered:" . $e);
-    }
+    }*/
     
     /**********CAMBIAR DINERO DEL VENDEDOR*********/
-    $money=floatval($money);
+/*    $money=floatval($money);
     $dineroV=$money+$price;
     $dineroV=floatval($dineroV);
     $idU=$_POST["vendedor"];
@@ -163,4 +163,4 @@ try {
    header("Location: ../../verCompras.php");
 } catch (MongoDB\Driver\Exception\Exception $e) {
     die("Error:" . $e);
-}
+}*/

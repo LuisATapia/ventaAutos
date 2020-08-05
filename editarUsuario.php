@@ -64,36 +64,6 @@ if (!isset($_SESSION['typeUser']) || !isset($_SESSION['idUser'])) {
                         </div>
                     </div>
                     <!--TARJETA-->
-                    <h4>Editar Tarjeta <i class="fas fa-credit-card"></i></h4>
-                    <div class="form-row">
-                        <br>
-                        <div class="form-group col-md-6">
-                            <label for="registerNumCard">Número de Tarjeta</label>
-                            <input type="text" class="form-control" id="registerNumCard" name="updateNumCard" maxlength="16" value=<?php echo $numCard;?>>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="registerNumCard">Saldo de Cuenta:</label>
-                            <label type="text" class="form-control" id="registerNumCard" name="updateMoney"><?php echo $money;?></label>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="registerExp">Fecha de Expiración</label>
-                            <input type="text" class="form-control" id="registerExp" name="updateExp" placeholder="DD-YY" value=<?php echo $dateExp;?> required>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="registerCvv">Código CVV</label>
-                            <input type="password" class="form-control" id="updateCvv" name="updateCvv" maxlength="4">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="registerCvv">Banco</label>
-                            <input type="text" class="form-control" id="updateCvv" name="updateBank" maxlength="4" required="" value=<?php echo $bank;?>>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <input type="hidden" class="form-control" id="registerCvv" name="cvv" maxlength="4" value=<?php echo $cvv;?> >
-                        </div>
-                        <div class="form-group col-md-6">
-                            <input type="hidden" class="form-control" id="registerCvv" name="updateMoney" maxlength="4" value=<?php echo $money;?>>
-                        </div>
-                    </div>
                     <div class="row justify-content-center">
                         <input type="submit" class="btn btn-primary" value="Registrar">
                     </div>
