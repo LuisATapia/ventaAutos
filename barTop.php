@@ -14,7 +14,7 @@
                     <a class="nav-link" href="menuStart.php">Menu</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="createCar.php">Vender Auto</a>
+                    <a class="nav-link" href="showCars.php">Vender Auto</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="verCompras.php">Compras</a>

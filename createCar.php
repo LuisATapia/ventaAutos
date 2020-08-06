@@ -27,85 +27,77 @@ if (!isset($_SESSION['typeUser']) || !isset($_SESSION['idUser'])) {
     <div class="row justify-content-center">
         <div class="col-md-6 pt-5">
             <form action="Connections/Cars/addCar.php" method="POST">
-                <div class="row">
-                    <h3>Agregar Auto<i class="fas fa-car"></i></h3>
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="form-group">
-                            <strong>Niv:</strong>
-                            <input type="text" name="niv" id="niv" class="form-control" placeholder="" required>
-                        </div>
+                <h3>Agregar Auto<i class="fas fa-car"></i></h3>
+
+                <div class="form-row">    
+                    <div class="form-group col-md-6">
+                        <strong>Niv:</strong>
+                        <input type="text" name="niv" id="niv" class="form-control" placeholder="" required>
                     </div>
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="form-group">
-                            <strong>Marca:</strong>
-                            <select name="marcaAuto" class="form-control">
-                                <option value="BMW">BMW</option>
-                                <option value="Chevrolet">Chevrolet</option>
-                                <option value="Ford">Ford</option>
-                                <option value="Mazda">Mazda</option>
-                                <option value="Mercedes">Mercedes</option>
-                                <option value="Nissan">Nissan</option>
-                                <option value="Volkswagen">Volkswagen</option>                         
-                            </select>
-                        </div>
+                    <div class="form-group col-md-6">
+                        <strong>Marca:</strong>
+                        <select name="marcaAuto" class="form-control">
+                            <option value="BMW">BMW</option>
+                            <option value="Chevrolet">Chevrolet</option>
+                            <option value="Ford">Ford</option>
+                            <option value="Mazda">Mazda</option>
+                            <option value="Mercedes">Mercedes</option>
+                            <option value="Nissan">Nissan</option>
+                            <option value="Volkswagen">Volkswagen</option>                         
+                        </select>
+                    </div>
+                </div>   
+                <div class="form-row">  
+                    <div class="form-group col-md-6">
+                        <strong>Model:</strong>
+                        <input type="text" name="model" id="model" class="form-control" placeholder="" required>
                     </div>
                     
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="form-group">
-                            <strong>Model:</strong>
-                            <input type="text" name="model" id="model" class="form-control" placeholder="" required>
+                    <div class="form-group col-md-6">
+                        <strong>Transmisión:</strong>
+                        <select name="transAuto" class="form-control">
+                            <option value="Automático">Automático</option>
+                            <option value="Manual">Manual</option>                  
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">  
+                    <div class="form-group col-md-6">
+                        <strong>Year:</strong>
+                        <input type="text" name="year" id="year" class="form-control" placeholder="YYYY" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <strong>Plate:</strong>
+                        <input type="text" name="plate" id="plate" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <strong>Color:</strong>
+                        <input type="text" name="color" id="color" class="form-control" placeholder="" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <strong>Price:</strong>
+                        <input type="text" name="price" id="price" class="form-control" placeholder="" required>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <h4>Tags</h4>
+                    <div id="tags" class="form-row">
+                        <div class="form-group col-md-6">
+                            <input type="text" name="tag1" class="form-control" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="text" name="tag2" class="form-control" required>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="form-group">
-                            <strong>Transmisión:</strong>
-                            <select name="transAuto" class="form-control">
-                                <option value="Automático">Automático</option>
-                                <option value="Manual">Manual</option>                  
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="form-group">
-                            <strong>Year:</strong>
-                            <input type="text" name="year" id="year" class="form-control" placeholder="YYYY" required>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="form-group">
-                            <strong>Plate:</strong>
-                            <input type="text" name="plate" id="plate" class="form-control" placeholder="" required>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="form-group">
-                            <strong>Color:</strong>
-                            <input type="text" name="color" id="color" class="form-control" placeholder="" required>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="form-group">
-                            <strong>Price:</strong>
-                            <input type="text" name="price" id="price" class="form-control" placeholder="" required>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <h4>Tags</h4>
-                        <div id="tags" class="form-row">
-                            <div class="form-group col-md-4">
-                                <input type="text" name="tag1" class="form-control" required>
-                            </div>
-                            <div class="form-group col-md-4">
-                                <input type="text" name="tag2" class="form-control" required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                        <input type="submit" name="btnsave" value="Registrar" class="btn btn-primary">
-                    </div>
-                </form>
-            </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                    <input type="submit" name="btnsave" value="Registrar" class="btn btn-primary">
+                </div>
+            </form>
         </div>
-    </body>
-    </html>
+    </div>
+</body>
+</html>
 
