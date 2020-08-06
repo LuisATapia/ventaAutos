@@ -13,6 +13,18 @@ if (!isset($_SESSION['typeUser']) || !isset($_SESSION['idUser'])) {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Show Cars</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+    body {
+      background-image: url(img/vocho.jpg);
+      background-attachment: fixed;
+      background-size: 100vw 100vh;
+    }
+    #form{
+      background-color: rgba(255, 255, 255, 0.9);
+        padding: 25px;
+        border-radius: 15px;
+    }
+</style>
 </head>
 <body>
     <?php 
@@ -28,7 +40,7 @@ if (!isset($_SESSION['typeUser']) || !isset($_SESSION['idUser'])) {
             </div>
         </div>
     </div>-->
-    <div class="container mt-5 pt-5">
+    <div class="container mt-5 pt-5" id="form">
         <div class="row">
             <div class="col-lg-12 margin-tb">
                 <div class="row justify-content-center">

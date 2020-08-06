@@ -17,7 +17,7 @@
       background-size: 100vw 100vh;
     }
     form{
-      background-color: rgba(255, 255, 255, 0.7);
+      background-color: rgba(255, 255, 255, 0.9);
         padding: 25px;
         border-radius: 15px;
     }

@@ -13,19 +13,34 @@ if (!isset($_SESSION['typeUser']) || !isset($_SESSION['idUser'])) {
 	<link rel="stylesheet" href="CSS/main.css">
 	<style type="text/css">
 		#cuadroBusq{
-			border-radius: all;
 			border-color: black;
 			padding: 10;
-			background-color: White;
+			background-color: rgba(255, 255, 255, 0.8);
+			margin:10px;
+			width: 750px;
+			border-radius: 20px;
 		}
-		#marca{
-			height: 15px;
-		}
+        body {
+            background-image: url(img/porsche.jpg);
+            background-attachment: fixed;
+            background-size: 100vw 100vh;
+        }
+        #form{
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 25px;
+            border-radius: 15px;
+        }
+        h3{
+        	color:white;
+        }
+        #cardAuto{
+        	background-color: rgba(255, 255, 255, 0.8);
+        }
 	</style>
 </head>
 <body style="padding:75px;">
 	<div >
-		<h3>Buscar</h3><br>
+		<h3>Autos en Venta</h3><br>
 		<div class="row" id="cuadroBusq">
 
 			<div>
@@ -79,9 +94,9 @@ if (!isset($_SESSION['typeUser']) || !isset($_SESSION['idUser'])) {
 				{
 					if($row->status =="disponible")
 					{
-						echo "<div class='col-sm-6'>
-						<div class='card'>
-						<div class='card-body'>
+						echo "<div class='col-sm-3'>
+						<div class='card' id='cardAuto'>
+						<div class='card-body' >
 						<h5 class='card-title'>". $row->model." ".$row->year."</h5>
 						<p class='card-text'>". $row->price."</p>
 						<p>".$row->marca."</p>

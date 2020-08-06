@@ -3,12 +3,24 @@
 <head>
     <title>Ver Autos</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        body {
+            background-image: url(img/porsche.jpg);
+            background-attachment: fixed;
+            background-size: 100vw 100vh;
+        }
+        #form{
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 25px;
+            border-radius: 15px;
+        }
+    </style>
 </head>
 <body>
     <?php 
     include 'barraPrecio.php';
     ?>
-    <div class="container mt-5 pt-5">
+    <div class="container mt-5 pt-5" id="form">
         <div class="row">
             <h1>Lista de Autos</h1>
                 <input id="buscar" type="text" class="form-control md-5" placeholder="Buscar Auto" />
@@ -25,7 +37,8 @@
                 <th>Model</th>
                 <th>Year</th>
                 <th>Plate</th>
-                <th>Color</th></thead>";
+                <th>Color</th>
+                <th>Action</th></thead>";
                 foreach($rows as $row)
                 {
                     echo "<tr>".

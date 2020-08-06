@@ -13,13 +13,12 @@ if ($_SESSION['typeUser']=="user" || !isset($_SESSION['idUser'])) {
 	 <style>
     #trg1 {
       margin-top: 10%;
-      margin-left: 22.5%;
+      margin-left: 24.5%;
       float: left;
     }
     #cards {
-      margin-right: 10px;
       border-radius: 10px;
-      background-color: #FFB433;
+      background-color: #AFAFAF;
       transition: all 0.2s;
       margin: 25px;
     }
@@ -31,6 +30,7 @@ if ($_SESSION['typeUser']=="user" || !isset($_SESSION['idUser'])) {
       background-size: 100vw 100vh;
       text-align: center;
       align-content: center;
+      background-image: url(img/mercedes.jpg);
     }
     a {
       text-decoration: none;
@@ -49,7 +49,7 @@ if ($_SESSION['typeUser']=="user" || !isset($_SESSION['idUser'])) {
 			<a href="verUsuarios.php">
 				<img src="img/user.png" class="card-img-top" alt="...">
 				<div class="card-body">
-					<h4 class="card-title text-center">Users</h4>
+					<h4 class="card-title text-center">Usuarios</h4>
 				</div>
 			</a>
 		</div>
@@ -58,7 +58,7 @@ if ($_SESSION['typeUser']=="user" || !isset($_SESSION['idUser'])) {
 			<a href="verAutos.php">
 				<img src="img/car.png" class="card-img-top" alt="...">
 				<div class="card-body">
-					<h4 class="card-title text-center">Cars</h4>
+					<h4 class="card-title text-center">Autos</h4>
 				</div>
 			</a>
 		</div>
@@ -67,7 +67,7 @@ if ($_SESSION['typeUser']=="user" || !isset($_SESSION['idUser'])) {
 			<a href="#">
 				<img src="img/list.png" class="card-img-top" alt="...">
 				<div class="card-body">
-					<h4 class="card-title text-center">Sales</h4>
+					<h4 class="card-title text-center">Ventas</h4>
 				</div>
 			</a>
 		</div>
