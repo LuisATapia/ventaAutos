@@ -35,7 +35,7 @@
   </style>
 </head>
 <body>
-	<?php include 'barraprecio.php' ?>
+	<?php include 'barraPrecio.php' ?>
 	<div class="container-fluid container card-group" id="trg1">
 
 		<div class=" text-body  mb-3 col-md-6" style="width: 12rem; padding:12px;" id="cards">
@@ -55,9 +55,9 @@
 				</div>
 			</a>
 		</div>
-
+		
 		<div class=" text-body  mb-3 col-md-6" style="width: 12rem; padding:12px;" id="cards">
-			<a href="show_Travels.php">
+			<a href="#">
 				<img src="img/list.png" class="card-img-top" alt="...">
 				<div class="card-body">
 					<h4 class="card-title text-center">Sales</h4>

@@ -13,13 +13,13 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav ml-auto mb-2 mb-lg-1">
                 <li class="nav-item">
-                    <a class="nav-link" href="menuStart.php">Menu</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="createCar.php"></a>
+                    <a class="nav-link" href="menuAdmin.php">Menu</a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="editarUsuario.php">Perfil</a>
+                    <a class="nav-link" href="verUsuarios.php">Usuarios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="verAutos.php">Autos</a>
                 </li>
                 <li class="nav-item ">
                     <a class="nav-link" href="Connections/Users/closeSession.php">Salir </a>

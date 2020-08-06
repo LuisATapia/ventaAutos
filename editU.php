@@ -4,26 +4,26 @@ session_start();
 /*if (!isset($_SESSION['typeUser']) || !isset($_SESSION['idUser'])) {
     header("Location: log_in.php");
 }*/
-    include 'Connections/Users/db.inc.php';
-    $id=$_GET['id'];
+include 'Connections/Users/db.inc.php';
+$id=$_GET['id'];
 
-    $filter = [
-        '_id' => new MongoDB\BSON\ObjectId($id)
-    ];
-    $query = new MongoDB\Driver\Query($filter);
+$filter = [
+    '_id' => new MongoDB\BSON\ObjectId($id)
+];
+$query = new MongoDB\Driver\Query($filter);
 
-    try {
-        $result = $manager->executeQuery($dbname, $query);
-        $row=$result->toArray();
-        $name=$row[0]->name;
-        $last=$row[0]->lastname;
-        $typeUser=$row[0]->typeUser;
-        $curp=$row[0]->curp;
-        $email=$row[0]->email;
-        $pass=$row[0]->password;
-    } catch (MongoDB\Driver\Exception\Exception $e) {
-        die("Error Encountered:" . $e);
-    }
+try {
+    $result = $manager->executeQuery($dbname, $query);
+    $row=$result->toArray();
+    $name=$row[0]->name;
+    $last=$row[0]->lastname;
+    $typeUser=$row[0]->typeUser;
+    $curp=$row[0]->curp;
+    $email=$row[0]->email;
+    $pass=$row[0]->password;
+} catch (MongoDB\Driver\Exception\Exception $e) {
+    die("Error Encountered:" . $e);
+}
 
 ?>
 <!DOCTYPE html>
@@ -40,7 +40,7 @@ session_start();
 </head>
 
 <body >
-    <?php include 'barTop.php';
+    <?php include 'barraPrecio.php';
     ?>
     <div class="container mt-5">
         <div class="row justify-content-center">
@@ -56,10 +56,18 @@ session_start();
                             <label for="registerLastName">Apellido</label>
                             <input type="text" class="form-control" id="registerLastName" name="updateLastName" value=<?php echo $last;?> required>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="registerCurp">Curp</label>
-                        <input type="text" class="form-control" id="registerCurp" name="updateCurp" placeholder="" maxlength="18" value=<?php echo $curp;?> required>
+
+                        <div class="form-group col-md-8">
+                            <label for="registerCurp">Curp</label>
+                            <input type="text" class="form-control" id="registerCurp" name="updateCurp" placeholder="" maxlength="18" value=<?php echo $curp;?> required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="inputZip">Type User</label>
+                            <select name="updateTypeUser" class="form-control">
+                                <option value="user">Usuario</option>
+                                <option value="admin">Administrador</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="registerEmail">Email</label>
@@ -73,10 +81,6 @@ session_start();
                         <div class="form-group col-md-6">
                             <label for="registerConfirm">Confirmar Contraseña</label>
                             <input type="password" class="form-control" id="updaterConfirm">
-                        </div>
-                        <div class="form-group col-md-2" style="display:none">
-                            <label for="inputZip">Type User</label>
-                            <input type="password" class="form-control" id="registerTypeUser" name="updateTypeUser" value="user" value=<?php echo $typeUser;?>>
                         </div>
                         <div class="form-group col-md-2" style="display:none">
                             <label for="inputZip">Type User</label>

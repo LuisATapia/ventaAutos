@@ -17,8 +17,14 @@
         //var_dump($result);
         $_SESSION['idUser'] =$user;
         $_SESSION['typeUser']=$row[0]->typeUser;
-
-        header("Location: ../../menuStart.php");
+        if($_SESSION["typeUser"]=="user")
+        {
+            header("Location: ../../menuStart.php");
+        }else
+        {
+            header("Location: ../../menuAdmin.php");
+        }
+        
     }   catch(MongoDB\Driver\Exception\Exception $e){
         die("Error Encountered: ".$e);
     }

@@ -3,14 +3,16 @@
 <head>
 	<title>Ve Usuarios</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 </head>
 <body>
 	<?php 
-	include 'barTop.php';
+	include 'barraPrecio.php';
 	?>
 	<div class="container mt-5 pt-5">
 		<div class="row">
 			<h1>Lista de Usuarios</h1>
+			<input id="buscar" type="text" class="form-control md-5" placeholder="Buscar Auto" />
 			<?php
 			try{
 				include 'Connections/Users/db.inc.php';
@@ -24,7 +26,8 @@
                 <th>Curp</th>
                 <th>Tipo Usuario</th>
                 <th>Correo</th>
-                <th>Actions</th>";
+                <th>Actions</th>
+                </thead>";
                 foreach($rows as $row)
                 {
                 	echo "<tr>".
@@ -38,6 +41,7 @@
                 	"</td></tr>";
 
                 }
+                echo "</table>";
 			}catch(Exception $e)
 			{
 
@@ -47,4 +51,5 @@
 			</div>
 		</div>
 	</body>
+	<script  src="js/buscarTable.js"></script>
 	</html>
