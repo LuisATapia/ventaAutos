@@ -6,6 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <style>
+    body {
+      background-image: url(img/fondologin.jpg);
+      background-attachment: fixed;
+      background-size: 100vw 100vh;
+    }
+    form{
+      background-color: rgba(255, 255, 255, 0.8);
+        padding: 25px;
+        border-radius: 15px;
+    }
+</style>
 </head>
 <body>
     <?php include 'topnav.php';?>
@@ -23,7 +35,7 @@
                         <label for="password">Password</label>
                         <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password">
                     </div>
-                    <input type="submit" value="LOGIN" class="btn btn-primary btn-block">
+                    <input type="submit" value="Ingresar" class="btn btn-primary btn-block">
                 </form>
             </div>
         </div>

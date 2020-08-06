@@ -1,3 +1,10 @@
+<?php
+session_start();
+
+if ($_SESSION['typeUser']=="user" || !isset($_SESSION['idUser'])) {
+	header("Location: log_in.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
