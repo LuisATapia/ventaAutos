@@ -73,12 +73,12 @@ if (!isset($_SESSION['typeUser']) || !isset($_SESSION['idUser'])) {
                 </div>
                 <div class="form-row">  
                     <div class="form-group col-md-6">
-                        <strong>Year:</strong>
+                        <strong>Año:</strong>
                         <input type="text" name="year" id="year" class="form-control" placeholder="YYYY" required>
                     </div>
                     <div class="form-group col-md-6">
-                        <strong>Plate:</strong>
-                        <input type="text" name="plate" id="plate" class="form-control" placeholder="" required>
+                        <strong>Placas:</strong>
+                        <input type="text" name="plate" id="plate" class="form-control" placeholder="Sin Guiones" required>
                     </div>
                 </div>
                 <div class="form-row">
@@ -88,7 +88,7 @@ if (!isset($_SESSION['typeUser']) || !isset($_SESSION['idUser'])) {
                     </div>
                     <div class="form-group col-md-6">
                         <strong>Price:</strong>
-                        <input type="text" name="price" id="price" class="form-control" placeholder="" required>
+                        <input type="text" name="price" id="price" class="form-control" placeholder="" required maxlength="6">
                     </div>
                 </div>
                 <div class="col-md-12">

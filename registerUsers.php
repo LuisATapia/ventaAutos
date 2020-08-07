@@ -22,6 +22,7 @@
         border-radius: 15px;
     }
 </style>
+<script src="js/Validaciones.js"></script> 
 </head>
 
 <body >
@@ -30,34 +31,34 @@
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-6 mt-5">     
-                <form  action="Connections/Users/addUser.php" method="POST">
+                <form  action="Connections/Users/addUser.php" method="POST" onsubmit="return validarUsuarios()">
                     <h3>Datos Usuario <i class="fas fa-user-plus"></i></h3>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="registerName">Nombre:</label>
-                            <input type="text" class="form-control" id="registerName" name="registerName">
+                            <input type="text" class="form-control" id="registerName" name="registerName" required="">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="registerLastName">Apellido</label>
-                            <input type="text" class="form-control" id="registerLastName" name="registerLastName">
+                            <input type="text" class="form-control" id="registerLastName" name="registerLastName" required="">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="registerCurp">Curp</label>
-                        <input type="text" class="form-control" id="registerCurp" name="registerCurp" placeholder="" maxlength="18">
+                        <input type="text" class="form-control" id="registerCurp" name="registerCurp" placeholder="" maxlength="18" required="">
                     </div>
                     <div class="form-group">
                         <label for="registerEmail">Email</label>
-                        <input type="email" class="form-control" id="registerEmail" name="registerEmail" placeholder="">
+                        <input type="email" class="form-control" id="registerEmail" name="registerEmail" placeholder="" required="">
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="registerPassword">Contraseña</label>
-                            <input type="password" class="form-control" id="registerPassword" name="registerPassword">
+                            <input type="password" class="form-control" id="registerPassword" name="registerPassword" required="">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="registerConfirm">Confirmar Contraseña</label>
-                            <input type="password" class="form-control" id="registerConfirm">
+                            <input type="password" class="form-control" id="registerConfirm" required="">
                         </div>
                         <div class="form-group col-md-2" style="display:none">
                             <label for="inputZip">Type User</label>
@@ -65,13 +66,14 @@
                         </div>
                         <div class="justify-content-center">
                         <input type="submit" class="btn btn-primary" value="Registrar">
-                    </div>
+                    </div> 
                     </div>
                 </form>
             </div>
         </div>
     </div>
     <script src="JS/registerUsers.js"></script>
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
 </script>

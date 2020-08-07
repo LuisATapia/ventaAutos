@@ -28,6 +28,7 @@ if (!isset($_SESSION['typeUser']) || !isset($_SESSION['idUser'])) {
         border-radius: 15px;
     }
 </style>
+<script src="js/Validaciones.js"></script> 
 </head>
 
 <body >
@@ -37,7 +38,7 @@ if (!isset($_SESSION['typeUser']) || !isset($_SESSION['idUser'])) {
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-6 mt-5">     
-                <form  action="Connections/Users/updateUser.php" method="POST">
+                <form  action="Connections/Users/updateUser.php" method="POST" onsubmit="return validarUsuarios()">
                     <h3>Editar Datos <i class="fas fa-user-plus"></i></h3>
                     <div class="form-row">
                         <div class="form-group col-md-6">
