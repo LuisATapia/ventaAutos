@@ -96,21 +96,17 @@ if (!isset($_SESSION['typeUser']) || !isset($_SESSION['idUser'])) {
         try{
             $result = $manager->executeQuery($dbname, $query);
             $row = $result->toArray();
-        //$carId = $row->_id;
             foreach($row as $r)
             {
-            /*echo $r->_id;
-            echo '<br>';
-
-            echo $r->model." ".$r->price;
-            echo '<br>';*/
             if($r->status =="disponible")
             {
                 echo "<div class='col-sm-3'>
                 <div class='card' id='cardAuto'>
                 <div class='card-body'>
                 <h5 class='card-title'>". $r->model." ".$r->year."</h5>
-                <p class='card-text'>". $r->price."</p>";
+                <p class='card-text'> <Strong>Precio: </Strong>". $r->price."</p>
+                <p><Strong>Marca: </Strong>".$r->marca."</p>
+                <p><Strong>Transmisión: </Strong>".$r->tipo."</p><Strong>Características: </Strong>";
                 foreach($r->tags as $tag)
                 {
                     echo "<label class='card-text'>

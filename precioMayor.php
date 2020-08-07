@@ -107,7 +107,9 @@ if (!isset($_SESSION['typeUser']) || !isset($_SESSION['idUser'])) {
                     <div class='card' id='cardAuto'>
                     <div class='card-body'>
                     <h5 class='card-title'>". $r->model." ".$r->year."</h5>
-                    <p class='card-text'>". $r->price."</p>";
+                    <p class='card-text'> <Strong>Precio: </Strong>". $r->price."</p>
+                    <p><Strong>Marca: </Strong>".$r->marca."</p>
+                    <p><Strong>Transmisión: </Strong>".$r->tipo."</p><Strong>Características: </Strong>";
                     foreach($r->tags as $tag)
                     {
                         echo "<label class='card-text'>
