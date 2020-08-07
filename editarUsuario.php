@@ -16,6 +16,18 @@ if (!isset($_SESSION['typeUser']) || !isset($_SESSION['idUser'])) {
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/basicStyle.css">
+    <style>
+    body {
+      background-image: url(img/combi.jpg);
+      background-attachment: fixed;
+      background-size: 100vw 100vh;
+    }
+    form{
+      background-color: rgba(255, 255, 255, 0.9);
+        padding: 25px;
+        border-radius: 15px;
+    }
+</style>
 </head>
 
 <body >

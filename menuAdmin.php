@@ -18,7 +18,7 @@ if ($_SESSION['typeUser']=="user" || !isset($_SESSION['idUser'])) {
     }
     #cards {
       border-radius: 10px;
-      background-color: #AFAFAF;
+      background-color: White;
       transition: all 0.2s;
       margin: 25px;
     }

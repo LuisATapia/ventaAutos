@@ -8,7 +8,7 @@ if (!isset($_SESSION['typeUser']) || !isset($_SESSION['idUser'])) {
 <?php require 'barTop.php';?>
 <html>
 <head>
-	<title></title>
+	<title>Car Sale</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 	<link rel="stylesheet" href="CSS/main.css">
 	<style type="text/css">
@@ -39,7 +39,7 @@ if (!isset($_SESSION['typeUser']) || !isset($_SESSION['idUser'])) {
 	</style>
 </head>
 <body style="padding:75px;">
-	<div >
+
 		<h3>Autos en Venta</h3><br>
 		<div class="row" id="cuadroBusq">
 
@@ -98,9 +98,9 @@ if (!isset($_SESSION['typeUser']) || !isset($_SESSION['idUser'])) {
 						<div class='card' id='cardAuto'>
 						<div class='card-body' >
 						<h5 class='card-title'>". $row->model." ".$row->year."</h5>
-						<p class='card-text'>". $row->price."</p>
-						<p>".$row->marca."</p>
-						<p>".$row->tipo."</p>";
+						<p class='card-text'> <Strong>Precio: </Strong>". $row->price."</p>
+						<p><Strong>Marca: </Strong>".$row->marca."</p>
+						<p><Strong>Transmisión: </Strong>".$row->tipo."</p><Strong>Características: </Strong>";
 						foreach($row->tags as $tag)
 						{
 							echo "<label class='card-text'>
