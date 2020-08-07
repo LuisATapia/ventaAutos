@@ -24,7 +24,7 @@ if (!isset($_SESSION['typeUser']) || !isset($_SESSION['idUser'])) {
 </head>
 <body>
     <?php include './barTop.php';?>
-    <div class="row" style="padding:15">
+    <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
                 <h2>Cars</h2>
@@ -36,7 +36,7 @@ if (!isset($_SESSION['typeUser']) || !isset($_SESSION['idUser'])) {
     </div>
     <div class="row justify-content-center">
         <div class="col-md-6 pt-5">
-            <form action="Connections/Cars/addCar.php" method="POST">
+            <form action="Connections/Cars/addCar.php" method="POST" enctype="multipart/form-data">
                 <h3>Agregar Auto<i class="fas fa-car"></i></h3>
 
                 <div class="form-row">    
@@ -82,14 +82,18 @@ if (!isset($_SESSION['typeUser']) || !isset($_SESSION['idUser'])) {
                     </div>
                 </div>
                 <div class="form-row">
-                    <div class="form-group col-md-6">
+                    <div class="form-group col-md-4">
                         <strong>Color:</strong>
                         <input type="text" name="color" id="color" class="form-control" placeholder="" required>
                     </div>
-                    <div class="form-group col-md-6">
+                    <div class="form-group col-md-4">
                         <strong>Precio:</strong>
                         <input type="text" name="price" id="price" class="form-control" placeholder="" required maxlength="6">
                     </div>
+                    <div class="form-group col-md-4">
+                        <strong>Imagen:</strong>
+                        <input type="file" name="pic" id="pic" class="form-control" accept="image/jpeg">
+                    </div>  
                 </div>
                 <div class="col-md-12">
                     <h4>Características</h4>

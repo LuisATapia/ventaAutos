@@ -15,6 +15,12 @@ session_start();
     $priceF= floatval($price);
     $marca=$_POST["marcaAuto"];
     $trans=$_POST["transAuto"];
+
+    /*****IMAGEN*****/
+    $ruta = '../../fotoAutos/'.$niv;
+    $imagen = $_FILES['pic']['tmp_name'];
+    move_uploaded_file($imagen,$ruta);
+    /*************/
     $car = [
         '_id' => new MongoDB\BSON\ObjectId,
         'niv' => $niv, 
@@ -27,6 +33,7 @@ session_start();
         'price'=>$priceF,
         'status'=>'disponible',
         'vendedor'=>$_SESSION['idUser'],
+        'image'=>$ruta,
         'tags'=>$tags
     ];
 

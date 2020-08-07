@@ -94,6 +94,7 @@ if (!isset($_SESSION['typeUser']) || !isset($_SESSION['idUser'])) {
 				{
 					if($row->status =="disponible")
 					{
+						//echo "<img src=".$row->image." width='150'>";
 						echo "<div class='col-sm-3'>
 						<div class='card' id='cardAuto'>
 						<div class='card-body' >
