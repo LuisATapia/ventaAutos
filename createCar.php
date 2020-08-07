@@ -41,7 +41,7 @@ if (!isset($_SESSION['typeUser']) || !isset($_SESSION['idUser'])) {
 
                 <div class="form-row">    
                     <div class="form-group col-md-6">
-                        <strong>Niv:</strong>
+                        <strong>Número de Identificación Vehicular:</strong>
                         <input type="text" name="niv" id="niv" class="form-control" placeholder="" required>
                     </div>
                     <div class="form-group col-md-6">
@@ -59,7 +59,7 @@ if (!isset($_SESSION['typeUser']) || !isset($_SESSION['idUser'])) {
                 </div>   
                 <div class="form-row">  
                     <div class="form-group col-md-6">
-                        <strong>Model:</strong>
+                        <strong>Modelo:</strong>
                         <input type="text" name="model" id="model" class="form-control" placeholder="" required>
                     </div>
                     
@@ -87,12 +87,12 @@ if (!isset($_SESSION['typeUser']) || !isset($_SESSION['idUser'])) {
                         <input type="text" name="color" id="color" class="form-control" placeholder="" required>
                     </div>
                     <div class="form-group col-md-6">
-                        <strong>Price:</strong>
+                        <strong>Precio:</strong>
                         <input type="text" name="price" id="price" class="form-control" placeholder="" required maxlength="6">
                     </div>
                 </div>
                 <div class="col-md-12">
-                    <h4>Tags</h4>
+                    <h4>Características</h4>
                     <div id="tags" class="form-row">
                         <div class="form-group col-md-6">
                             <input type="text" name="tag1" class="form-control" required>

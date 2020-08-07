@@ -61,14 +61,14 @@ if (!isset($_SESSION['typeUser']) || !isset($_SESSION['idUser'])) {
                 <thead>
                 <th>Estatus</th>
                 <th>Marca</th>
-                <th>Niv</th>
-                <th>Model</th>
-                <th>Year</th>
-                <th>Plate</th>
+                <th>Número de Identificación</th>
+                <th>Modelo</th>
+                <th>Año</th>
+                <th>Placa</th>
                 <th>Color</th>
-                <th>Price</th>
-                <th>Tags</th>
-                <th>Action</th>
+                <th>Precio</th>
+                <th>Características</th>
+                <th>Acciones</th>
                 </thead>";
                 foreach($rows as $row){
                     if($row->vendedor == $_SESSION['idUser'])

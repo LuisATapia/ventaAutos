@@ -11,19 +11,19 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav ml-auto mb-2 mb-lg-1">
                 <li class="nav-item">
-                    <a class="nav-link" href="menuStart.php">Menu</a>
+                    <a class="nav-link" href="menuStart.php"><Strong>Cátalogo</Strong></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="showCars.php">Vender Auto</a>
+                    <a class="nav-link" href="showCars.php">Autos en Venta</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="verCompras.php">Compras</a>
+                    <a class="nav-link" href="verCompras.php">Compras realizadas</a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="editarUsuario.php">Perfil</a>
+                    <a class="nav-link" href="editarUsuario.php"><?php echo $_SESSION['nombre'] ?></a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="Connections/Users/closeSession.php">Salir </a>
+                    <a class="nav-link" href="Connections/Users/closeSession.php">Cerrar Sesión</a>
                 </li>
             </ul>
         </div>

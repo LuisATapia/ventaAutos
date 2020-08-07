@@ -17,6 +17,7 @@
         //var_dump($result);
         $_SESSION['idUser'] =$user;
         $_SESSION['typeUser']=$row[0]->typeUser;
+        $_SESSION['nombre']=$row[0]->name;
         if($_SESSION["typeUser"]=="user")
         {
             header("Location: ../../menuStart.php");

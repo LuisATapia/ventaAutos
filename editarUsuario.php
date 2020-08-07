@@ -18,7 +18,7 @@ if (!isset($_SESSION['typeUser']) || !isset($_SESSION['idUser'])) {
     <link rel="stylesheet" href="CSS/basicStyle.css">
     <style>
     body {
-      background-image: url(img/combi.jpg);
+      background-image: url(img/bmw.jpg);
       background-attachment: fixed;
       background-size: 100vw 100vh;
     }

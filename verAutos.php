@@ -33,12 +33,12 @@
                 echo "<table class='table' id='tabla'>
                 <thead>
                 <th>Estatus</th>
-                <th>Niv</th>
-                <th>Model</th>
-                <th>Year</th>
-                <th>Plate</th>
+                <th>Número de Identificación</th>
+                <th>Modelo</th>
+                <th>Año</th>
+                <th>Placa</th>
                 <th>Color</th>
-                <th>Action</th></thead>";
+                <th>Acción</th></thead>";
                 foreach($rows as $row)
                 {
                     echo "<tr>".

@@ -29,7 +29,7 @@ if (!isset($_SESSION['typeUser']) || !isset($_SESSION['idUser'])) {
 
                 <div class="form-row">    
                     <div class="form-group col-md-6">
-                        <strong>Niv:</strong>
+                        <strong>Númerod e Identificación Vehicular:</strong>
                         <input type="text" name="niv" id="niv" class="form-control" placeholder="" required value="<?php echo $_GET["niv"]?>">
                     </div>
                     <div class="form-group col-md-6">
@@ -48,7 +48,7 @@ if (!isset($_SESSION['typeUser']) || !isset($_SESSION['idUser'])) {
 
                 <div class="form-row">  
                     <div class="form-group col-md-6">
-                        <strong>Model:</strong>
+                        <strong>Modelo:</strong>
                         <input type="text" name="model" id="model" class="form-control" placeholder="" required value="<?php echo $_GET["model"]?>">
                     </div>
                     
@@ -63,11 +63,11 @@ if (!isset($_SESSION['typeUser']) || !isset($_SESSION['idUser'])) {
 
                 <div class="form-row">  
                     <div class="form-group col-md-6">
-                        <strong>Year:</strong>
+                        <strong>Año:</strong>
                         <input type="text" name="year" id="year" class="form-control" placeholder="YYYY" required value="<?php echo $_GET["year"]?>">
                     </div>
                     <div class="form-group col-md-6">
-                        <strong>Plate:</strong>
+                        <strong>Placa:</strong>
                         <input type="text" name="plate" id="plate" class="form-control" placeholder="" required value="<?php echo $_GET["plate"]?>">
                     </div>
                 </div>
@@ -77,12 +77,12 @@ if (!isset($_SESSION['typeUser']) || !isset($_SESSION['idUser'])) {
                         <input type="text" name="color" id="color" class="form-control" placeholder="" required value="<?php echo $_GET["color"]?>" >
                     </div>
                     <div class="form-group col-md-6">
-                        <strong>Price:</strong>
+                        <strong>Precio:</strong>
                         <input type="text" name="price" id="price" class="form-control" placeholder="" requiredvalue="<?php echo $_GET["price"]?>" >
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
-                    <h4>Tags</h4>
+                    <h4>Características</h4>
                     <div id="tags" class="form-row">
                         <div class="form-group col-md-4">
                             <input type="text" name="tag0" class="form-control" value=<?php echo $_GET["tag0"]; ?> required>
