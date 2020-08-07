@@ -17,7 +17,7 @@ session_start();
     $trans=$_POST["transAuto"];
 
     /*****IMAGEN*****/
-    $ruta = '../../fotoAutos/'.$niv;
+    $ruta = 'fotoAutos/'.$niv;
     $imagen = $_FILES['pic']['tmp_name'];
     move_uploaded_file($imagen,$ruta);
     /*************/

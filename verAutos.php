@@ -49,7 +49,7 @@
                     "<td>".$row->plate."</td>".
                     "<td>".$row->color."</td>".
                     "<td>".
-                    "<a class='btn btn-danger' href='Connections/Users/dropUser.php?id=".$row->_id."'>Eliminar</a>".
+                    "<a class='btn btn-danger' href='Connections/Users/dropCar.php?id=".$row->_id."'>Eliminar</a>".
                     "</td></tr>";
 
                 }
