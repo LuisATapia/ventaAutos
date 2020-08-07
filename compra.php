@@ -4,6 +4,32 @@ session_start();
 if (!isset($_SESSION['typeUser']) || !isset($_SESSION['idUser'])) {
     header("Location: log_in.php");
 }
+    include 'Connections/Cars/cars.inc.php';
+    $id=$_GET['idCar'];
+
+    $filter = [
+        '_id' => new MongoDB\BSON\ObjectId($id)
+    ];
+    $query = new MongoDB\Driver\Query($filter);
+
+    try {
+        $result = $manager->executeQuery($dbname, $query);
+        $row=$result->toArray();
+        $model=$row[0]->model;
+        $niv=$row[0]->niv;
+        $year=$row[0]->year;
+        $plate=$row[0]->plate;
+        $marca=$row[0]->marca;
+        $price=$row[0]->price;
+        $tipo=$row[0]->tipo;
+        $vendedor=$row[0]->vendedor;
+        $color=$row[0]->color;
+        $tag0=$row[0]->tags[0];
+        $tag1=$row[0]->tags[1];
+        $pic=$row[0]->image;
+    } catch (MongoDB\Driver\Exception\Exception $e) {
+        die("Error Encountered:" . $e);
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,54 +62,67 @@ if (!isset($_SESSION['typeUser']) || !isset($_SESSION['idUser'])) {
             <div class="col-md-6 mt-5">                
                 <form action="Connections/Compras/addCompra.php" method="POST">
                     <h2 class="text-center">Compra de Auto</h2>
+                    <div class="form-group">
+                        <img src="Connections/Cars/<?php echo $pic;?>" width="490" heigh="400">
+                    </div>
                     <h4> Datos del auto</h4>
                     <div class="form-group">
-                        <label for="username">Modelo:</label>
-                        <label><?php echo $_GET['model']; ?> </label>
+                        <label for="username"><Strong>Niv: </Strong></label>
+                        <label name="Lprice"><?php echo $niv; ?> </label>
                     </div>
                     <div class="form-group">
-                        <label for="username">Year:</label>
-                        <label><?php echo $_GET['year']; ?> </label>
+                        <label for="username"><Strong>Placa: </Strong></label>
+                        <label name="Lprice"><?php echo $plate; ?> </label>
                     </div>
                     <div class="form-group">
-                        <label for="username">Price:</label>
-                        <label name="Lprice"><?php echo $_GET['price']; ?> </label>
+                        <label for="username"><Strong>Modelo: </Strong></label>
+                        <label><?php echo $model; ?> </label>
                     </div>
                     <div class="form-group">
-                        <input type="hidden" name="price" value=<?php echo $_GET['price']; ?>>
+                        <label for="username"><Strong>Year: </Strong></label>
+                        <label><?php echo $year; ?> </label>
                     </div>
                     <div class="form-group">
-                        <input type="hidden" name="model" value=<?php echo $_GET['model']; ?>>
+                        <label for="username"><Strong>Price: </Strong></label>
+                        <label name="Lprice"><?php echo $price; ?> </label>
+                    </div>
+                    
+
+                    <div class="form-group">
+                        <input type="hidden" name="price" value=<?php echo $price; ?>>
                     </div>
                     <div class="form-group">
-                        <input type="hidden" name="year" value=<?php echo $_GET['year']; ?>>
+                        <input type="hidden" name="model" value=<?php echo $model; ?>>
                     </div>
                     <div class="form-group">
-                        <input type="hidden" name="color" value=<?php echo $_GET['color']; ?>>
+                        <input type="hidden" name="year" value=<?php echo $year; ?>>
                     </div>
                     <div class="form-group">
-                        <input type="hidden" name="niv" value=<?php echo $_GET['niv']; ?>>
+                        <input type="hidden" name="color" value=<?php echo $color; ?>>
                     </div>
                     <div class="form-group">
-                        <input type="hidden" name="plate" value=<?php echo $_GET['plate']; ?>>
+                        <input type="hidden" name="niv" value=<?php echo $niv; ?>>
                     </div>
                     <div class="form-group">
-                        <input type="hidden" name="tag0" value=<?php echo $_GET['tag0']; ?>>
+                        <input type="hidden" name="plate" value=<?php echo $plate; ?>>
                     </div>
                     <div class="form-group">
-                        <input type="hidden" name="tag1" value=<?php echo $_GET['tag1']; ?>>
+                        <input type="hidden" name="tag0" value=<?php echo $tag0; ?>>
                     </div>
                     <div class="form-group">
-                        <input type="hidden" name="marca" value=<?php echo $_GET['marca']; ?>>
+                        <input type="hidden" name="tag1" value=<?php echo $tag1; ?>>
                     </div>
                     <div class="form-group">
-                        <input type="hidden" name="tipoT" value=<?php echo $_GET['tipo']; ?>>
+                        <input type="hidden" name="marca" value=<?php echo $marca; ?>>
                     </div>
                     <div class="form-group">
-                        <input type="hidden" name="vendedor" value=<?php echo $_GET['vendedor']; ?>>
+                        <input type="hidden" name="tipoT" value=<?php echo $tipo; ?>>
+                    </div>
+                    <div class="form-group">
+                        <input type="hidden" name="vendedor" value=<?php echo $vendedor; ?>>
                     </div>
                     <div>
-                        <input type="hidden" name="idCar" value= <?php echo $_GET['idCar']; ?>>
+                        <input type="hidden" name="idCar" value= <?php echo $id; ?>>
                     </div>
                     <div class="form-group col-md-12">
                         <input type="submit" value="Comprar" class="btn btn-primary btn-block">

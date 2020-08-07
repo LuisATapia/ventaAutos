@@ -28,7 +28,7 @@ if (!isset($_SESSION['typeUser']) || !isset($_SESSION['idUser'])) {
         border-radius: 15px;
     }
 </style>
-<script src="js/Validaciones.js"></script> 
+    <script src="JS/Validaciones.js"></script> 
 </head>
 
 <body >
@@ -78,7 +78,7 @@ if (!isset($_SESSION['typeUser']) || !isset($_SESSION['idUser'])) {
                     </div>
                     <!--TARJETA-->
                     <div class="row justify-content-center">
-                        <input type="submit" class="btn btn-primary" value="Registrar">
+                        <input type="submit" class="btn btn-primary" value="Guardar">
                     </div>
                 </form>
             </div>

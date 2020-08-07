@@ -146,18 +146,7 @@ if (!isset($_SESSION['typeUser']) || !isset($_SESSION['idUser'])) {
 					{
 						echo "
 						<br>
-						<a class='btn btn-primary' href='compra.php?idCar=".$row->_id .
-						"&price=". $row->price.
-						"&model=". $row->model.
-						"&year=" . $row->year.
-						"&niv=" . $row->niv.
-						"&color=" . $row->color.
-						"&plate=" . $row->plate.
-						"&tag0=" . $row->tags[0]. 
-						"&tag1=" . $row->tags[1].
-						"&vendedor=" . $row->vendedor.
-						"&marca=" . $row->marca.
-						"&tipo=" . $row->tipo.  
+						<a class='btn btn-primary' href='compra.php?idCar=".$row->_id.
 						"'>Comprar</a>
 						</div>
 						</div>
