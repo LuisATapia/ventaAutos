@@ -61,6 +61,15 @@ function validarAutos()
 		document.getElementById('precio').focus;
 		return false;
 	}
+}
 
-
+function validarLogin()
+{
+	email=document.getElementById('email').value;
+	pass=document.getElementById('password').value;
+	if(email==="" || pass==="")
+	{
+		alert('Llene todos los campos');
+		return false;
+	}
 }

@@ -18,6 +18,7 @@
         border-radius: 15px;
     }
 </style>
+<script type="text/javascript" src="JS/Validaciones.js"></script>
 </head>
 <body>
     <?php include 'topnav.php';?>
@@ -25,15 +26,15 @@
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-6 mt-5">                
-                <form action="Connections/Users/login.php" method="POST">
+                <form action="Connections/Users/login.php" method="POST" onsubmit="return validarLogin();">
                     <h2 class="text-center">Login</h2>
                     <div class="form-group">
                         <label for="username">Username</label>
-                        <input type="text" class="form-control" id="email" name="email" placeholder="Enter Email">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email" required="">
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password">
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password" required="">
                     </div>
                     <input type="submit" value="Ingresar" class="btn btn-primary btn-block">
                 </form>
