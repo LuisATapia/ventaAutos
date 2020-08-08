@@ -32,6 +32,7 @@
 
                 echo "<table class='table' id='tabla'>
                 <thead>
+                <th>Vendedor</th>
                 <th>Estatus</th>
                 <th>Número de Identificación</th>
                 <th>Modelo</th>
@@ -41,7 +42,19 @@
                 <th>Acción</th></thead>";
                 foreach($rows as $row)
                 {
+                    /*******NOMBRE DE VENDEDOR*****/
+
+                        include 'Connections/Users/db.inc.php';
+                        $idV=$row->vendedor;
+
+                        $filter = ['_id' => new MongoDB\BSON\ObjectId($idV)];
+                        $query = new MongoDB\Driver\Query($filter);
+                        $result = $manager->executeQuery($dbname, $query);
+                        $resultado=$result->toArray();
+                        $nombreVendedor=$resultado[0]->email;
+                        /************/
                     echo "<tr>".
+                    "<td>".$nombreVendedor."</td>".
                     "<td>".$row->status."</td>".
                     "<td>".$row->niv."</td>".
                     "<td>".$row->model."</td>".

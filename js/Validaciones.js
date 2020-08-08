@@ -34,3 +34,33 @@ function validarUsuarios()
 		return false;
 	}
 }
+
+function validarAutos()
+{
+	var niv,model,plate,color,year,precio;
+	niv=document.getElementById('niv').value;
+	model=document.getElementById('model').value;
+	year=document.getElementById('year').value;
+	plate=document.getElementById('plate').value;
+	color=document.getElementById('color').value;
+	precio=document.getElementById('price').value;
+	if(niv==="" || model==="" || year==="" || plate==="" || color==="")
+	{
+		alert('Llene los campos solicitados');
+		return false;
+	}
+	if(/^([0-9])*$/.test(year)===false)
+	{
+		alert('Sólo números en año');
+		document.getElementById('year').focus;
+		return false;
+	}
+	if(/^([0-9])*$/.test(precio)===false)
+	{
+		alert('Sólo números en precio');
+		document.getElementById('precio').focus;
+		return false;
+	}
+
+
+}

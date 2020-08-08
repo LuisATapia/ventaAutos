@@ -40,6 +40,7 @@ session_start();
                 <th>Plate</th>
                 <th>Color</th>
                 <th>Price</th>
+                <th>Fecha</th>
                 </thead>";
                 foreach($rows as $row)
                 {
@@ -53,6 +54,7 @@ session_start();
                 		<td>".$row->car->plate."</td>.
                 		<td>".$row->car->color."</td>.
                 		<td>".$row->car->price."</td>.
+                        <td>".$row->date."</td>.
                 		</tr>";
                 	}else
                 	{

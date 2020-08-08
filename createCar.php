@@ -22,6 +22,7 @@ if (!isset($_SESSION['typeUser']) || !isset($_SESSION['idUser'])) {
       }
   </style>
 </head>
+<script type="text/javascript" src="js/Validaciones.js"></script>
 <body>
     <?php include './barTop.php';?>
     <div class="row">
@@ -36,7 +37,7 @@ if (!isset($_SESSION['typeUser']) || !isset($_SESSION['idUser'])) {
     </div>
     <div class="row justify-content-center">
         <div class="col-md-6 pt-5">
-            <form action="Connections/Cars/addCar.php" method="POST" enctype="multipart/form-data">
+            <form action="Connections/Cars/addCar.php" method="POST" enctype="multipart/form-data" onsubmit="return validarAutos();">
                 <h3>Agregar Auto<i class="fas fa-car"></i></h3>
 
                 <div class="form-row">    
