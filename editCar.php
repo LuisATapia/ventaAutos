@@ -9,6 +9,18 @@ if (!isset($_SESSION['typeUser']) || !isset($_SESSION['idUser'])) {
 <head>
     <title>Editar Auto</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <style>
+        body {
+          background-image: url(img/vocho.jpg);
+          background-attachment: fixed;
+          background-size: 100vw 100vh;
+      }
+      form{
+          background-color: rgba(255, 255, 255, 0.9);
+          padding: 25px;
+          border-radius: 15px;
+      }
+  </style>
 </head>
 <body>
     <?php include 'barTop.php';?>
